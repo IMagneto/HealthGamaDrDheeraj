@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block photoSlideShow %}
+<div class="row">
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-8">
+        <div class="photoShow row align-items-center">
+            <div id="photoSlide" class="carousel slide" data-ride="carousel">
+
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#photoSlide" data-slide-to="0" class="active"></li>
+                    <li data-target="#photoSlide" data-slide-to="1"></li>
+                    <li data-target="#photoSlide" data-slide-to="2"></li>
+                </ul>
+
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="{{ url_for('static',filename='images/Doctor4.jpg') }}" alt="Doctor1">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{{ url_for('static',filename='images/doctor2.jpg') }}" alt="Doctor2">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{{ url_for('static',filename='images/Doctor5.jpg') }}" alt="Doctor3">
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#photoSlide" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#photoSlide" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+
+</div>
+{% endblock %} 
+{% block main %}
+dheeraj karnam
+{% endblock %}

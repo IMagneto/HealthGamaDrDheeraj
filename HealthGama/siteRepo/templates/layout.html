@@ -1,0 +1,122 @@
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="ie=edge">
+    <title>Dheeraj website</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+    <link href='https://fonts.googleapis.com/css?family=Coiny' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Miss+Fajardose" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row flex-wrap header_details justify-content-between align-items-center">
+            <div class="col-md-3 col-sm-12 col-12 pt-1 pr-0">
+                <ul class="nav" style="display:inline-block">
+                    <li><i class="fas fa-phone"></i>&nbsp;9703985566</li>
+                    <!-- <li><i class="fas fa-envelope-open"></i>&nbsp;karnamdhe@gmail.com </li> -->
+                </ul>
+            </div>
+            <div class="col-md-7 col-sm-12 col-12" style="text-align:center">
+                <a class="blog-header-logo web_header text-dark" href="#"
+                    style="font-style:italic;display: inline-block;">
+                    <h1>{{Doctor_Name}}</h1>
+                </a>
+            </div>
+            <div class="col-md-2 col-sm-12 col-12 social_media">
+                <ul class="nav">
+                    <li id="fb_icon"><i class="fab fa-facebook-f"></i></li>
+                    <li id="twitter_icon"><i class="fab fa-twitter"></i></li>
+                    <li><i class="fab fa-google-plus-g"></i></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-2 col-sm-2 col-12"></div>
+            <div class="col-md-8 col-sm-8">
+                <div class="d-flex nav_for_phones py-1 mb-2 justify-content-around">
+                    <a class="p-2 text-muted" id="nav_item_1" href="{{url_for('index')}}"
+                        style="font-weight:bold">Home</a>
+                    <a class="p-2 text-muted" id="nav_item_2" href="{{url_for('services')}}"
+                        style="font-weight:bold">Services</a>
+                    <a class="p-2 text-muted" id="nav_item_3" href="{{url_for('about')}}"
+                        style="font-weight:bold">About</a>
+                    <a class="p-2 text-muted" id="nav_item_4" href="#" style="font-weight:bold">Practice</a>
+                    <a class="p-2 text-muted" id="nav_item_5" href="#" style="font-weight:bold">Contact</a>
+
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-2 col-12"></div>
+        </div>
+        <!-- <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+            <div class="col-md-6 px-0">
+                <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
+                <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and
+                    efficiently about what's most interesting in this post's contents.</p>
+                <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
+            </div>
+        </div> -->
+        {% block photoSlideShow %}
+        {% endblock %}
+        <div class="main">{% block main %} {% endblock %} </div>
+        <footer class="pt-4 my-md-5 pt-md-5" id="footer">
+            <div class="row">
+                <div class="col-md-4 border-top col-sm-12" style="text-align:center">
+                    <h5>Features</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Cool stuff</a></li>
+                        <li><a class="text-muted" href="#">Random feature</a></li>
+                        <li><a class="text-muted" href="#">Team feature</a></li>
+                        <li><a class="text-muted" href="#">Stuff for developers</a></li>
+                        <li><a class="text-muted" href="#">Another one</a></li>
+                        <li><a class="text-muted" href="#">Last time</a></li>
+                    </ul>
+                </div> <!--  for mobile viewing check the row column position changing -->
+                <div class="col-md-4 col-sm-12" style="text-align:center;overflow: visible;">
+                    <h1 class="d-none d-md-block"
+                        style="display:inline-block;position: absolute;right:60;top:-40px;font-family: 'Miss Fajardose', cursive;font-size: 60px;font-weight: bold">
+                        Thank You</h1>
+                    <ul class="list-unstyled text-small" style="padding-top:20%">
+                        <li><a class="text-muted" href="#">Resource</a></li>
+                        <li><a class="text-muted" href="#">Resource name</a></li>
+                        <li><a class="text-muted" href="#">Another resource</a></li>
+                        <li><a class="text-muted" href="#">Final resource</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-12 border-top" style="text-align:center">
+                    <h5>About</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Team</a></li>
+                        <li><a class="text-muted" href="#">Locations</a></li>
+                        <li><a class="text-muted" href="#">Privacy</a></li>
+                        <li><a class="text-muted" href="#">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align:center">
+                <small class="mb-0 text-muted" style="display:block">&copy; 2019-{{Doctor_Name}}, All Rights
+                    Reserved</small>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
